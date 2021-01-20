@@ -18,7 +18,7 @@ class _IssueSelectState extends State<IssueSelect> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           Container(
-            height: 200,
+            height: 150,
             child: Stack(
               children: <Widget>[
                 Positioned(
@@ -56,84 +56,98 @@ class _IssueSelectState extends State<IssueSelect> {
                   ),
                 ),
                 SizedBox(
-                  height: 40,
+                  height: 30,
                 ),
                 FadeAnimation(
                   1,
                   Container(
-                    padding: EdgeInsets.all(8.0),
+                    padding: EdgeInsets.all(10.0),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10.0),
                       color: Colors.transparent,
                     ),
                     child: Container(
-                      child: Row(
+                      child: Column(
+                        children: <Widget>[
+                          Row(
+                            children: <Widget>[
+                              Column(
+                                children: <Widget>[
+                                  Image.asset('assets/images/lights-and-signs.png',height: MediaQuery.of(context).size.height*0.2,width: MediaQuery.of(context).size.width*0.4,),
+                                ],
+                              ),
+                              Column(
+                                children: <Widget>[
+                                  Image.asset('assets/images/lights-and-signs.png',height: MediaQuery.of(context).size.height*0.2,width: MediaQuery.of(context).size.width*0.4,),
+                                ],
+                              ),
+                            ],
+                          ),
+                          SizedBox(
+                            height: 20.0,
+                          ),
+                          Row(
                         children: <Widget>[
                           Column(
                             children: <Widget>[
-                              Container(
-                                width: MediaQuery.of(context).size.width*0.3,
-                                height: MediaQuery.of(context).size.height*0.2,
-                                padding: EdgeInsets.all(5.0),
-                                decoration: BoxDecoration(
-                                  image: DecorationImage(
-                                    image: AssetImage('assetsimages/roadworks.png'),
-                                    fit: BoxFit.fitWidth,
-                                  ),
-                                ),
-                                
-                              )
+                              Image.asset('assets/images/lights-and-signs.png',height: MediaQuery.of(context).size.height*0.2,width: MediaQuery.of(context).size.width*0.4,),
                             ],
                           ),
-                          
+                          Column(
+                            children: <Widget>[
+                              Image.asset('assets/images/lights-and-signs.png',height: MediaQuery.of(context).size.height*0.2,width: MediaQuery.of(context).size.width*0.4,),
+                            ],
+                          ),
+                        ],
+                      ),
                         ],
                       ),
                     ),
                   ),
                 ),
                 
-                SizedBox(
-                  height: 20.0,
-                ),
-                FadeAnimation(
-                  1,
-                  GestureDetector(
-                    child: Container(
-                      height: 50,
-                      margin: EdgeInsets.symmetric(horizontal: 60),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(50),
-                        color: Color.fromRGBO(49, 39, 79, 1),
-                      ),
-                      child: Center(
-                        child: Text(
-                          "Next",
-                          style: TextStyle(color: Colors.white),
-                        ),
-                      ),
-                    ),
-                    onTap:(){
-                      setState(() {
-                            print("Next Pressed!");   
-                            //Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=> MainScreen(model: widget.model)));
-                                  });
-                    } ,
-                  ),
-                ),
-                SizedBox(
-                  height: 20.0,
-                ),
-                FadeAnimation(
-                  1,
-                  Center(
-                    child: Text(
-                      "Create Account",
-                      style: TextStyle(
-                        color: Colors.pink[200],
-                      ),
-                    ),
-                  ),
-                ),
+                // SizedBox(
+                //   height: 20.0,
+                // ),
+                // FadeAnimation(
+                //   1,
+                //   GestureDetector(
+                //     child: Container(
+                //       height: 50,
+                //       margin: EdgeInsets.symmetric(horizontal: 60),
+                //       decoration: BoxDecoration(
+                //         borderRadius: BorderRadius.circular(50),
+                //         color: Color.fromRGBO(49, 39, 79, 1),
+                //       ),
+                //       child: Center(
+                //         child: Text(
+                //           "Next",
+                //           style: TextStyle(color: Colors.white),
+                //         ),
+                //       ),
+                //     ),
+                //     onTap:(){
+                //       setState(() {
+                //             print("Next Pressed!");   
+                //             //Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=> MainScreen(model: widget.model)));
+                //                   });
+                //     } ,
+                //   ),
+                // ),
+                // SizedBox(
+                //   height: 20.0,
+                // ),
+                // FadeAnimation(
+                //   1,
+                //   Center(
+                //     child: Text(
+                //       "Create Account",
+                //       style: TextStyle(
+                //         color: Colors.pink[200],
+                //       ),
+                //     ),
+                //   ),
+                // ),
               ],
             ),
           )

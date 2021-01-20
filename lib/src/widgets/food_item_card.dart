@@ -38,6 +38,7 @@ class FoodItemCard extends StatelessWidget {
                           fontSize: 28.0,
                           fontWeight: FontWeight.bold,
                           color: Colors.black87,
+                          backgroundColor: Colors.white,
                         ),
                         ),
                     ),
