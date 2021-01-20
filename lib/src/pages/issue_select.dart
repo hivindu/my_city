@@ -1,39 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:food_app/src/screens/main_screen.dart';
-import 'package:food_app/src/socpe%20model/main_model.dart';
-import 'package:scoped_model/scoped_model.dart';
+import '../../Animation/FadeAnimation.dart';
 
-import '../Animation/FadeAnimation.dart';
-
-class App extends StatelessWidget {
-
-final MainModel mainModel = MainModel();
-
+class IssueSelect extends StatefulWidget {
+  final int id;
+  IssueSelect({this.id});
   @override
-  Widget build(BuildContext context) {
-    return ScopedModel<MainModel>(
-      model: mainModel,
-      child: MaterialApp(
-        debugShowCheckedModeBanner: false,
-      title: "My CIty",
-      theme: ThemeData(
-        primaryColor:Colors.white,
-      ),
-      //home: MainScreen(model: mainModel),
-       home: LogScreen(mainModel),
-      ),
-     );
-  }
+  _IssueSelectState createState() => _IssueSelectState();
 }
 
-class LogScreen extends StatefulWidget {
- final MainModel model;
- LogScreen(this.model);
-  @override
-  _LogScreenState createState() => _LogScreenState();
-}
-
-class _LogScreenState extends State<LogScreen> {
+class _IssueSelectState extends State<IssueSelect> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -72,7 +47,7 @@ class _LogScreenState extends State<LogScreen> {
                 FadeAnimation(
                   1,
                   Text(
-                    "Hello there, \nwelcome back",
+                    "Select Issue Type",
                     style: TextStyle(
                       fontSize: 30,
                       color: Colors.white,
@@ -91,59 +66,32 @@ class _LogScreenState extends State<LogScreen> {
                       borderRadius: BorderRadius.circular(10.0),
                       color: Colors.transparent,
                     ),
-                    child: Column(
-                      children: <Widget>[
-                        Container(
-                          padding: EdgeInsets.all(10.0),
-                          decoration: BoxDecoration(
-                            border: Border(
-                              bottom: BorderSide(
-                                color: Colors.grey[100],
-                              ),
-                            ),
+                    child: Container(
+                      child: Row(
+                        children: <Widget>[
+                          Column(
+                            children: <Widget>[
+                              Container(
+                                width: MediaQuery.of(context).size.width*0.3,
+                                height: MediaQuery.of(context).size.height*0.2,
+                                padding: EdgeInsets.all(5.0),
+                                decoration: BoxDecoration(
+                                  image: DecorationImage(
+                                    image: AssetImage('assetsimages/roadworks.png'),
+                                    fit: BoxFit.fitWidth,
+                                  ),
+                                ),
+                                
+                              )
+                            ],
                           ),
-                          child: TextField(
-                            decoration: InputDecoration(
-                              border: InputBorder.none,
-                              hintText: "Username",
-                              hintStyle: TextStyle(color: Colors.grey),
-                            ),
-                          ),
-                        ),
-                        Container(
-                          padding: EdgeInsets.all(10.0),
-                          decoration: BoxDecoration(
-                            border: Border(
-                              bottom: BorderSide(
-                                color: Colors.grey[100],
-                              ),
-                            ),
-                          ),
-                          child: TextField(
-                            decoration: InputDecoration(
-                                border: InputBorder.none,
-                                hintText: "Password",
-                                hintStyle: TextStyle(color: Colors.grey)),
-                          ),
-                        )
-                      ],
-                    ),
-                  ),
-                ),
-                SizedBox(
-                  height: 20.0,
-                ),
-                Center(
-                  child: FadeAnimation(
-                    1,
-                    Text(
-                      "Forgot Password?",
-                      style: TextStyle(
-                        color: Colors.pink[200],
+                          
+                        ],
                       ),
                     ),
                   ),
                 ),
+                
                 SizedBox(
                   height: 20.0,
                 ),
@@ -159,15 +107,15 @@ class _LogScreenState extends State<LogScreen> {
                       ),
                       child: Center(
                         child: Text(
-                          "Login",
+                          "Next",
                           style: TextStyle(color: Colors.white),
                         ),
                       ),
                     ),
                     onTap:(){
                       setState(() {
-                            print("Login Pressed !");   
-                            Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=> MainScreen(model: widget.model)));
+                            print("Next Pressed!");   
+                            //Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=> MainScreen(model: widget.model)));
                                   });
                     } ,
                   ),

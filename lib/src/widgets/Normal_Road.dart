@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:food_app/src/widgets/small_button.dart';
 
-class FoodItemCard extends StatelessWidget {
+class NormalRoad extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-              width: MediaQuery.of(context).size.width,
-              padding: EdgeInsets.symmetric(horizontal:5.0,),
+      width: MediaQuery.of(context).size.width,
+             // padding: EdgeInsets.symmetric(horizontal:5.0,),
               height:MediaQuery.of(context).size.height*0.3,
               decoration: BoxDecoration(
                   color: Colors.white,
@@ -23,11 +22,13 @@ class FoodItemCard extends StatelessWidget {
                 children: <Widget>[
                   Container(
                     width:MediaQuery.of(context).size.width-43,
-                    height: MediaQuery.of(context).size.height*0.35,
+                    height: MediaQuery.of(context).size.height*0.3,
                     decoration: BoxDecoration(
+                      
                       image: DecorationImage(
-                        image: AssetImage("assets/images/highway.jpg"),
+                        image: AssetImage("assets/images/normal.jpg"),
                         fit: BoxFit.fitWidth,
+                        
                       ),
                       borderRadius: BorderRadius.circular(10.0),
                     ),
@@ -37,13 +38,13 @@ class FoodItemCard extends StatelessWidget {
                         style: TextStyle(
                           fontSize: 28.0,
                           fontWeight: FontWeight.bold,
-                          color: Colors.black87,
+                          color: Colors.black,
                         ),
                         ),
                     ),
                   ),
                 ],
               ),
-            );
+    );
   }
 }

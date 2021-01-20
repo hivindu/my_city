@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:food_app/src/pages/favorite.dart';
 import 'package:food_app/src/pages/homepage.dart';
-import 'package:food_app/src/pages/order_page.dart';
+// import 'package:food_app/src/pages/order_page.dart';
 import 'package:food_app/src/pages/profile_page.dart';
-import 'package:food_app/src/socpe%20model/food_model.dart';
 import 'package:food_app/src/socpe%20model/main_model.dart';
 
 class MainScreen extends StatefulWidget {
@@ -23,7 +22,7 @@ class _MainScreenState extends State<MainScreen> {
   Widget currentpage;
 
   HomePage homePage;
-  OrderPage orderPage;
+  //OrderPage orderPage;
   FavoritePage favoritePage;
   ProfilePage profilePage;
   
@@ -34,11 +33,11 @@ class _MainScreenState extends State<MainScreen> {
     widget.model.fetchFoods();
     super.initState();
     homePage = HomePage();
-    orderPage = OrderPage();
+    //orderPage = OrderPage();
     favoritePage = FavoritePage();
     profilePage = ProfilePage();
     
-    pages =[homePage, favoritePage,orderPage, profilePage];
+    pages =[homePage, favoritePage, profilePage];
 
     currentpage= homePage;
   }
@@ -46,6 +45,8 @@ class _MainScreenState extends State<MainScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: BottomNavigationBar(
+        unselectedItemColor: Colors.pink,
+        backgroundColor: Color.fromRGBO(49, 39, 79, 1),
         onTap:(int index){
           setState(() {
             currentTabIndex = index;
@@ -55,21 +56,17 @@ class _MainScreenState extends State<MainScreen> {
         currentIndex: currentTabIndex,
         type: BottomNavigationBarType.fixed,
         items: <BottomNavigationBarItem>[
+          
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
             title: Text("home"),
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.explore),
-            title: Text("Explore"),
+            icon: Icon(Icons.add_circle_outline),
+            title: Text("report"),
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.shopping_cart),
-            title: Text("Orders"),
-          ),
-          
-          BottomNavigationBarItem(
-            icon: Icon(Icons.person),
+            icon: Icon(Icons.person,),
             title: Text("Profile"),
           ),
         ],

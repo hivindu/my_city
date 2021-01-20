@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:food_app/src/widgets/custom_listtile.dart';
 import 'package:food_app/src/widgets/small_button.dart';
+import 'package:gradient_text/gradient_text.dart';
 
 class ProfilePage extends StatefulWidget {
   @override
@@ -13,8 +14,10 @@ class _ProfilePageState extends State<ProfilePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(0xff21254A),
       body: SingleChildScrollView(
               child: Container(
+             
           padding: EdgeInsets.symmetric(
             vertical: 50.0,
             horizontal: 20.0,
@@ -25,10 +28,12 @@ class _ProfilePageState extends State<ProfilePage> {
               Text(
                 "Profile",
                 style: TextStyle(
-                  fontSize: 32.0,
+                  fontSize: 38.0,
                   fontWeight: FontWeight.bold,
+                  color: Colors.white,
                 ),
               ),
+             
               SizedBox(
                 height: 20.0,
               ),
@@ -49,7 +54,7 @@ class _ProfilePageState extends State<ProfilePage> {
                         )
                       ],
                       image: DecorationImage(
-                        image: AssetImage("assets/images/breakfast-coffee.jpg"),
+                        image: AssetImage("assets/images/img.png"),
                         fit: BoxFit.cover,
                       ),
                     ),
@@ -62,7 +67,7 @@ class _ProfilePageState extends State<ProfilePage> {
                     children: <Widget>[
                       Text(
                         "Desan Pathirana",
-                        style: TextStyle(fontSize: 16.0),
+                        style: TextStyle(fontSize: 16.0,color: Colors.white),
                       ),
                       SizedBox(
                         height: 10.0,
@@ -86,7 +91,7 @@ class _ProfilePageState extends State<ProfilePage> {
               ),
               Text(
                 "Account",
-                style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),
+                style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold,color:Colors.white,),
               ),
               SizedBox(height: 20.0,),
               Card(
@@ -110,23 +115,7 @@ class _ProfilePageState extends State<ProfilePage> {
                       Divider(
                         height: 10.0,
                         color: Colors.grey,
-                      ),
-                      CustomListTile(
-                       icon: Icons.shopping_cart,
-                       text: "Shipping",
-                     ),
-                      Divider(
-                        height: 10.0,
-                        color: Colors.grey,
-                      ),
-                      CustomListTile(
-                       icon: Icons.payment,
-                       text: "Payment",
-                     ),
-                      Divider(
-                        height: 10.0,
-                        color: Colors.grey,
-                      ),
+                      )
                     ],
                   ),
                 ),
@@ -136,7 +125,7 @@ class _ProfilePageState extends State<ProfilePage> {
               ),
               Text(
                 "Notifications",
-                style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),
+                style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold,color: Colors.white),
               ),
               SizedBox(height: 20.0,),
               Card(
@@ -196,7 +185,7 @@ class _ProfilePageState extends State<ProfilePage> {
               ),
               Text(
                 "Other",
-                style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),
+                style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold,color: Colors.white),
               ),
               SizedBox(height: 20.0,),
               Card(
@@ -213,12 +202,7 @@ class _ProfilePageState extends State<ProfilePage> {
                         height: 30.0,
                         color: Colors.grey,
                       ),
-                      Text("Currency",style: TextStyle(fontSize:16.0,),textAlign: TextAlign.start,),
-                      // SizedBox(height:10.0,),
-                      Divider(
-                        height: 30.0,
-                        color: Colors.grey,
-                      ),
+                     
                       ],
                     ),
                   ),

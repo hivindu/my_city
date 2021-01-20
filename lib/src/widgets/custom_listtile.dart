@@ -17,7 +17,7 @@ CustomListTile({this.icon,this.text});
         children: <Widget>[
           Icon(
             icon,
-            color: Colors.blue,
+            color: Color(0xFFAB47BC),
           ),
           SizedBox(
             width: 15.0,

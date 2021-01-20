@@ -12,7 +12,7 @@ SmallButton({this.btnText});
       width: 60.0,
       decoration: BoxDecoration(
         border: Border.all(
-          color: Colors.blue,
+          color: Color(0xFFAB47BC),
         ),
         borderRadius: BorderRadius.circular(20.0),
       ),
@@ -20,9 +20,10 @@ SmallButton({this.btnText});
           child: Text(
         "$btnText",
         style: TextStyle(
-          color: Colors.blue,
+          color: Color(0xFFAB47BC),
           fontSize: 16.0,
         ),
+        
       )),
     );
   }

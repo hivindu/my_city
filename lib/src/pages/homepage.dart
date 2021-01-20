@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:food_app/src/data/food_data.dart';
-import 'package:food_app/src/socpe%20model/food_model.dart';
 import 'package:food_app/src/socpe%20model/main_model.dart';
 import 'package:food_app/src/widgets/brought_food.dart';
-import 'package:food_app/src/widgets/food_category.dart';
+import 'package:food_app/src/widgets/issue_card.dart';
 import 'package:food_app/src/widgets/home_top_info.dart';
-import 'package:food_app/src/widgets/search_field.dart';
 import 'package:food_app/src/models/food_modal.dart';
 import 'package:scoped_model/scoped_model.dart';
+
+import '../../Animation/FadeAnimation.dart';
 
 class HomePage extends StatefulWidget {
 
@@ -29,55 +28,46 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: ListView(
-        padding: EdgeInsets.only(top:50.0,left: 20.0, right: 20.0 ),
-        children: <Widget>[
-          HomeTopInfo(),
-          FoodCategory(),
-          SizedBox(height: 20.0,),
-          SearchField(),
-           SizedBox(height: 20.0,),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: <Widget>[
-              Text(
-                "Frequently Brought Foods",
-                style: TextStyle(
-                  fontSize:18.0,
-                  fontWeight: FontWeight.bold,
-                ),
-                ),
-              GestureDetector(
-                onTap: (){},
-                child: Text(
-                  "View All",
-                  style: TextStyle(
-                    fontSize:18.0,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.orangeAccent,
-                  ),
-                  ),
-              ),
-            ],
-          ),
-          SizedBox(
-            height: 20.0,
-          ),
-          ScopedModelDescendant<MainModel>(
-            builder: (
-              BuildContext context, Widget child, MainModel model
-            ){
-              return Column(
-                children: model.foods.map(_buildFoodItems).toList(),
-              );
-            },
-            )
-        ],
+      backgroundColor: Color(0xff21254A),
+      body: Container(
+        decoration: BoxDecoration(
+         color: Color(0xff21254A),
+        ),
+        child: ListView(
+          padding: EdgeInsets.only(top:50.0,left: 20.0, right: 20.0 ),
+          children: <Widget>[
+            FadeAnimation(1,
+            HomeTopInfo(),
+            ),
+            
+            SizedBox(
+              height: 20.0,
+            ),
+            ScopedModelDescendant<MainModel>(
+              builder: (
+                BuildContext context, Widget child, MainModel model
+              ){
+                return
+                FadeAnimation(2, 
+                Column(
+                  //children: model.foods.map(_buildFoodItems).toList(),
+                  children: <Widget>[
+                    IssueItemCard(),
+                    IssueItemCard(),
+                    IssueItemCard(),
+                    IssueItemCard(),
+                  ],
+                )
+                );
+              },
+              )
+          ],
+        ),
       ),
     );
   }
 
-  Widget _buildFoodItems(Food food){
+Widget _buildFoodItems(Food food){
     return Container(
       margin: EdgeInsets.only(bottom: 20.0),
       child: BroughtFood(
@@ -91,4 +81,5 @@ class _HomePageState extends State<HomePage> {
       ),
     );
   }
+
 }

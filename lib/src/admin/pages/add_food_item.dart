@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:food_app/src/models/food_modal.dart';
-import 'package:food_app/src/screens/main_screen.dart';
 import 'package:food_app/src/socpe%20model/main_model.dart';
 import 'package:food_app/src/widgets/button.dart';
 import 'package:scoped_model/scoped_model.dart';
