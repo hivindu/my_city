@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:food_app/src/widgets/small_button.dart';
 
 class FoodItemCard extends StatelessWidget {
   @override

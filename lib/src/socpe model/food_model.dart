@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:food_app/src/models/food_modal.dart';
+import 'package:My_city/src/models/food_modal.dart';
 import 'package:scoped_model/scoped_model.dart';
 import 'package:http/http.dart' as http;
 

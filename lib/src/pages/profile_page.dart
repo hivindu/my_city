@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:food_app/src/widgets/custom_listtile.dart';
-import 'package:food_app/src/widgets/small_button.dart';
-import 'package:gradient_text/gradient_text.dart';
+import 'package:My_city/src/widgets/custom_listtile.dart';
+import 'package:My_city/src/widgets/small_button.dart';
 
 class ProfilePage extends StatefulWidget {
   @override

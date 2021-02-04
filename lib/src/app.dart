@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:food_app/src/screens/main_screen.dart';
-import 'package:food_app/src/socpe%20model/main_model.dart';
+import 'package:My_city/src/screens/main_screen.dart';
+import 'package:My_city/src/socpe%20model/main_model.dart';
 import 'package:scoped_model/scoped_model.dart';
 
 import '../Animation/FadeAnimation.dart';
@@ -168,7 +168,7 @@ class _LogScreenState extends State<LogScreen> {
                       setState(() {
                             print("Login Pressed !");   
                             Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=> MainScreen(model: widget.model)));
-                                  });
+                      });
                     } ,
                   ),
                 ),

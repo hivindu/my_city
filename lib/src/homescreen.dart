@@ -1,10 +1,10 @@
+import 'package:My_city/src/widgets/brought_food.dart';
 import 'package:flutter/material.dart';
-import 'package:food_app/src/data/food_data.dart';
-import 'package:food_app/src/widgets/brought_food.dart';
-import 'package:food_app/src/widgets/food_category.dart';
-import 'package:food_app/src/widgets/home_top_info.dart';
-import 'package:food_app/src/widgets/search_field.dart';
-import 'package:food_app/src/models/food_modal.dart';
+import 'package:My_city/src/data/food_data.dart';
+
+import 'package:My_city/src/widgets/home_top_info.dart';
+import 'package:My_city/src/widgets/search_field.dart';
+import 'package:My_city/src/models/food_modal.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -22,7 +22,6 @@ List<Food> _foods = foods;
         padding: EdgeInsets.only(top:50.0,left: 20.0, right: 20.0 ),
         children: <Widget>[
           HomeTopInfo(),
-          FoodCategory(),
           SizedBox(height: 20.0,),
           SearchField(),
            SizedBox(height: 20.0,),

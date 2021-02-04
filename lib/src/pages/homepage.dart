@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:food_app/src/socpe%20model/main_model.dart';
-import 'package:food_app/src/widgets/brought_food.dart';
-import 'package:food_app/src/widgets/issue_card.dart';
-import 'package:food_app/src/widgets/home_top_info.dart';
-import 'package:food_app/src/models/food_modal.dart';
+import 'package:My_city/src/socpe%20model/main_model.dart';
+
+import 'package:My_city/src/widgets/issue_card.dart';
+import 'package:My_city/src/widgets/home_top_info.dart';
+import 'package:My_city/src/models/food_modal.dart';
 import 'package:scoped_model/scoped_model.dart';
 
 import '../../Animation/FadeAnimation.dart';
@@ -67,19 +67,19 @@ class _HomePageState extends State<HomePage> {
     );
   }
 
-Widget _buildFoodItems(Food food){
-    return Container(
-      margin: EdgeInsets.only(bottom: 20.0),
-      child: BroughtFood(
-        id: food.id,
-        name: food.name,
-        imagePath: food.imagePath,
-        category: food.category,
-        discount: food.discount,
-        price: food.price,
-        ratings: food.ratings,
-      ),
-    );
-  }
+// Widget _buildFoodItems(Food food){
+//     return Container(
+//       margin: EdgeInsets.only(bottom: 20.0),
+//       child: BroughtFood(
+//         id: food.id,
+//         name: food.name,
+//         imagePath: food.imagePath,
+//         category: food.category,
+//         discount: food.discount,
+//         price: food.price,
+//         ratings: food.ratings,
+//       ),
+//     );
+//   }
 
 }

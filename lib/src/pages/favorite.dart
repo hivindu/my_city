@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:food_app/src/widgets/food_item_card.dart';
-import 'package:food_app/src/widgets/Normal_Road.dart';
+// import 'package:food_app/src/widgets/food_item_card.dart';
+// import 'package:food_app/src/widgets/Normal_Road.dart';
+import '../widgets/Normal_Road.dart';
+import '../widgets/food_item_card.dart';
 import 'issue_select.dart';
 
 
@@ -32,15 +34,7 @@ class _FavoritePageState extends State<FavoritePage> {
                 color: Colors.white,
               ),
             ),
-            // GradientText("Report Issue",
-            //       gradient: LinearGradient(colors: [
-            //         Colors.purpleAccent,
-            //         Colors.purpleAccent,
-            //         Colors.purple,
-                   
-            //       ]),
-            //       style: TextStyle(fontSize: 42),
-            //       textAlign: TextAlign.center),
+  
             SizedBox(
               height: 40.0,
             ),

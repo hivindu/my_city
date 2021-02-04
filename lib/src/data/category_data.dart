@@ -1,4 +1,4 @@
-import 'package:food_app/src/models/category_modal.dart';
+import 'package:My_city/src/models/category_modal.dart';
 
 final categories =[
   Category(

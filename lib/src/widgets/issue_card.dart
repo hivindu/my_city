@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:food_app/src/widgets/upvote_button.dart';
+import 'package:My_city/src/widgets/upvote_button.dart';
 import 'small_button.dart';
 
 class IssueItemCard extends StatelessWidget {
@@ -32,7 +32,7 @@ class IssueItemCard extends StatelessWidget {
                     height: 90.0,
                     decoration: BoxDecoration(
                       image: DecorationImage(
-                        image: AssetImage("assets/images/potholesjpg.jpg"),
+                        image: AssetImage("assets/images/potholes.jpg"),
                         fit: BoxFit.cover,
                       ),
                       borderRadius: BorderRadius.circular(10.0),

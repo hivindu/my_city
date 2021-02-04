@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:food_app/src/pages/favorite.dart';
-import 'package:food_app/src/pages/homepage.dart';
-// import 'package:food_app/src/pages/order_page.dart';
-import 'package:food_app/src/pages/profile_page.dart';
-import 'package:food_app/src/socpe%20model/main_model.dart';
+import 'package:My_city/src/pages/favorite.dart';
+import 'package:My_city/src/pages/homepage.dart';
+//  import 'package:My_city/src/pages/order_page.dart';
+import 'package:My_city/src/pages/profile_page.dart';
+import 'package:My_city/src/socpe%20model/main_model.dart';
 
 class MainScreen extends StatefulWidget {
   

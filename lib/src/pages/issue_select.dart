@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../Animation/FadeAnimation.dart';
+import '../widgets/issue_type_card.dart';
 
 class IssueSelect extends StatefulWidget {
   final int id;
@@ -71,16 +72,9 @@ class _IssueSelectState extends State<IssueSelect> {
                         children: <Widget>[
                           Row(
                             children: <Widget>[
-                              Column(
-                                children: <Widget>[
-                                  Image.asset('assets/images/lights-and-signs.png',height: MediaQuery.of(context).size.height*0.2,width: MediaQuery.of(context).size.width*0.4,),
-                                ],
-                              ),
-                              Column(
-                                children: <Widget>[
-                                  Image.asset('assets/images/lights-and-signs.png',height: MediaQuery.of(context).size.height*0.2,width: MediaQuery.of(context).size.width*0.4,),
-                                ],
-                              ),
+                              IssueTypeCard(Id: 1,image: 'assets/images/potholes.jpg',),
+                              SizedBox(width: 10.0,),
+                              IssueTypeCard(Id: 2,image: 'assets/images/lights-and-signs.jpg',),
                             ],
                           ),
                           SizedBox(
@@ -88,16 +82,10 @@ class _IssueSelectState extends State<IssueSelect> {
                           ),
                           Row(
                         children: <Widget>[
-                          Column(
-                            children: <Widget>[
-                              Image.asset('assets/images/lights-and-signs.png',height: MediaQuery.of(context).size.height*0.2,width: MediaQuery.of(context).size.width*0.4,),
-                            ],
-                          ),
-                          Column(
-                            children: <Widget>[
-                              Image.asset('assets/images/lights-and-signs.png',height: MediaQuery.of(context).size.height*0.2,width: MediaQuery.of(context).size.width*0.4,),
-                            ],
-                          ),
+                          IssueTypeCard(Id: 3,image: 'assets/images/floding.jpg',),
+                          SizedBox(width: 10.0,),
+                          IssueTypeCard(Id: 4,image: 'assets/images/roadworks.jpg',),
+                          
                         ],
                       ),
                         ],

@@ -1,4 +1,4 @@
-import 'package:food_app/src/models/food_modal.dart';
+import 'package:My_city/src/models/food_modal.dart';
   
   final foods =[
     Food(
