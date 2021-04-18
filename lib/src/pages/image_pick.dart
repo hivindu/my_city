@@ -4,7 +4,6 @@ import 'package:camera/camera.dart';
 import 'package:path/path.dart' show join;
 import 'package:path_provider/path_provider.dart';
 import 'dart:async';
-import 'dart:io';
 
 class Camera extends StatefulWidget {
   
@@ -109,7 +108,7 @@ floatingActionButton: FloatingActionButton(
             );
 
             // Attempt to take a picture and log where it's been saved.
-              await _controller.takePicture();
+              // await _controller.takePicture(path);
 
             // If the picture was taken, display it on a new screen.
             Navigator.push(

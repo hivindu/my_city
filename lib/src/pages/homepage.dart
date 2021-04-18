@@ -3,7 +3,7 @@ import 'package:My_city/src/socpe%20model/main_model.dart';
 
 import 'package:My_city/src/widgets/issue_card.dart';
 import 'package:My_city/src/widgets/home_top_info.dart';
-import 'package:My_city/src/models/food_modal.dart';
+// import 'package:My_city/src/models/food_modal.dart';
 import 'package:scoped_model/scoped_model.dart';
 
 import '../../Animation/FadeAnimation.dart';
