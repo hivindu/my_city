@@ -1,5 +1,3 @@
-import 'dart:typed_data';
-
 class Issue{
 final String id ;
 final String image ;
